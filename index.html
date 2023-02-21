@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/output.css" />
+    <title>Multi-step form</title>
+  </head>
+  <body>
+    <div class="container">
+      <!--STEPS-->
+      <section class="steps-section">
+        <div class="step">
+          <p class="step-number">1</p>
+          <div class="step-text-container">
+            <h1 class="step-heading">Step 1</h1>
+            <p class="step-text">Your info</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <p class="step-number">2</p>
+          <div class="step-text-container">
+            <h1 class="step-heading">Step 2</h1>
+            <p class="step-text">Select plan</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <p class="step-number">3</p>
+          <div class="step-text-container">
+            <h1 class="step-heading">Step 3</h1>
+            <p class="step-text">Add-ons</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <p class="step-number">4</p>
+          <div class="step-text-container">
+            <h1 class="step-heading">Step 4</h1>
+            <p class="step-text">Summary</p>
+          </div>
+        </div>
+      </section>
+
+      <!--FORM-->
+      <section class="form-section">
+        <h1 class="form-heading">Personal info</h1>
+        <p class="form-sub-heading">
+          Please provide your name,email address and phone number.
+        </p>
+
+        <form action="" class="step-1">
+          <div class="input-line">
+            <label for="name">Name</label>
+            <input type="text" placeholder="e.g. Stephen King" id="name" />
+          </div>
+
+          <div class="input-line">
+            <label for="email">Email Address</label>
+            <input
+              type="number"
+              placeholder="e.g. Stephenking@lorem.com"
+              id="email"
+            />
+          </div>
+
+          <div class="input-line">
+            <label for="phone-number">Phone Number</label>
+            <input
+              type="number"
+              placeholder="e.g. +234 48 1338 1293"
+              id="phone-number"
+            />
+          </div>
+        </form>
+      </section>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply w-full;
+}
+
+label {
+  @apply text-slate-800 font-semibold;
+}
+
+input {
+  @apply p-2 border-2 border-slate-300 rounded-lg;
+}
+
+.container {
+  @apply w-full h-5/6 flex gap-28  border-red-600 m-auto mt-10;
+}
+
+/*STEP CONTAINER*/
+.step-section {
+  @apply w-1/3;
+}
+
+.step {
+  @apply flex gap-3  bg-red-500 text-white p-5 my-2;
+}
+
+.step-number {
+  @apply font-semibold rounded-full p-3 my-auto bg-blue-400;
+}
+
+.step-heading {
+  @apply text-sm;
+}
+
+.step-text {
+  @apply text-xl;
+}
+
+/*FORM CONTAINER*/
+.form-section {
+  @apply w-auto;
+}
+
+.form-heading {
+  @apply text-slate-800 text-5xl font-semibold mt-6 mb-2;
+}
+
+.form-sub-heading {
+  @apply text-slate-400 mb-10;
+}
+
+.input-line {
+  @apply flex flex-col mb-5;
+}
