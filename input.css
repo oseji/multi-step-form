@@ -15,28 +15,32 @@ input {
 }
 
 .container {
-  @apply w-full h-5/6 flex gap-28  border-red-600 m-auto mt-10;
+  @apply bg-yellow-300 w-8/12  flex flex-row gap-20 border-red-600 m-auto mt-10 p-3 rounded-lg;
 }
 
 /*STEP CONTAINER*/
 .step-section {
-  @apply w-1/3;
+  @apply w-80 rounded-lg;
 }
 
 .step {
-  @apply flex gap-3  bg-red-500 text-white p-5 my-2;
+  @apply flex gap-3   text-white p-5 my-2;
+}
+
+.active-step {
+  @apply bg-blue-400 text-slate-800;
 }
 
 .step-number {
-  @apply font-semibold rounded-full p-3 my-auto bg-blue-400;
+  @apply h-11 w-11 text-center font-semibold rounded-full p-3 my-auto border border-white cursor-pointer;
 }
 
 .step-heading {
-  @apply text-sm;
+  @apply text-xs uppercase text-blue-400;
 }
 
 .step-text {
-  @apply text-xl;
+  @apply uppercase font-semibold;
 }
 
 /*FORM CONTAINER*/
@@ -54,4 +58,8 @@ input {
 
 .input-line {
   @apply flex flex-col mb-5;
+}
+
+.form-btn {
+  @apply bg-gray-900 text-white rounded-lg px-4 py-2 ml-auto mt-16 block;
 }

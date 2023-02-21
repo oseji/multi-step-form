@@ -10,9 +10,15 @@
   <body>
     <div class="container">
       <!--STEPS-->
-      <section class="steps-section">
+      <section
+        class="steps-section"
+        style="
+          background-image: url(assets/images/bg-sidebar-desktop.svg);
+          background-size: cover;
+        "
+      >
         <div class="step">
-          <p class="step-number">1</p>
+          <p class="step-number active-step">1</p>
           <div class="step-text-container">
             <h1 class="step-heading">Step 1</h1>
             <p class="step-text">Your info</p>
@@ -60,7 +66,7 @@
           <div class="input-line">
             <label for="email">Email Address</label>
             <input
-              type="number"
+              type="email"
               placeholder="e.g. Stephenking@lorem.com"
               id="email"
             />
@@ -74,6 +80,8 @@
               id="phone-number"
             />
           </div>
+
+          <button class="form-btn">Next Step</button>
         </form>
       </section>
     </div>
