@@ -10,8 +10,16 @@ label {
   @apply text-slate-800 font-semibold;
 }
 
+.error-label {
+  @apply text-red-600;
+}
+
+.input-error-message {
+  @apply text-red-600;
+}
+
 input {
-  @apply p-2 border-2 border-slate-300 rounded-lg;
+  @apply p-2 border-2 border-slate-300 rounded-lg  cursor-pointer;
 }
 
 .container {
