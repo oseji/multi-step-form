@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  @apply w-full;
+  @apply w-full bg-slate-100;
 }
 
 label {
@@ -15,24 +15,24 @@ input {
 }
 
 .container {
-  @apply bg-yellow-300 w-8/12  flex flex-row gap-20 border-red-600 m-auto mt-10 p-3 rounded-lg;
+  @apply bg-white w-8/12  flex flex-row gap-20  m-auto mt-10 p-3 rounded-xl;
 }
 
 /*STEP CONTAINER*/
 .step-section {
-  @apply w-80 rounded-lg;
+  @apply rounded-lg;
 }
 
 .step {
-  @apply flex gap-3   text-white p-5 my-2;
+  @apply flex gap-4 align-middle text-white pl-10 pr-20 my-4;
 }
 
 .active-step {
-  @apply bg-blue-400 text-slate-800;
+  @apply bg-blue-200 text-slate-800;
 }
 
 .step-number {
-  @apply h-11 w-11 text-center font-semibold rounded-full p-3 my-auto border border-white cursor-pointer;
+  @apply h-7 w-7 text-center text-sm font-semibold rounded-full mt-2 p-1 border border-white cursor-pointer;
 }
 
 .step-heading {
@@ -40,7 +40,7 @@ input {
 }
 
 .step-text {
-  @apply uppercase font-semibold;
+  @apply uppercase text-sm font-semibold;
 }
 
 /*FORM CONTAINER*/
@@ -49,7 +49,7 @@ input {
 }
 
 .form-heading {
-  @apply text-slate-800 text-5xl font-semibold mt-6 mb-2;
+  @apply text-slate-800 text-3xl font-bold mt-6 mb-2;
 }
 
 .form-sub-heading {
@@ -61,5 +61,5 @@ input {
 }
 
 .form-btn {
-  @apply bg-gray-900 text-white rounded-lg px-4 py-2 ml-auto mt-16 block;
+  @apply bg-sky-900 text-white rounded-lg px-4 py-2 ml-auto mt-20 mb-5 block;
 }
