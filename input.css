@@ -48,7 +48,7 @@ input {
 }
 
 .step-text {
-  @apply uppercase text-sm font-semibold;
+  @apply uppercase text-sm font-semibold cursor-pointer;
 }
 
 /*FORM CONTAINER*/
@@ -68,6 +68,55 @@ input {
   @apply flex flex-col mb-5;
 }
 
-.form-btn {
+.btn-grp {
+  @apply flex justify-between;
+}
+
+.form-btn-next {
   @apply bg-sky-900 text-white rounded-lg px-4 py-2 ml-auto mt-20 mb-5 block;
+}
+
+.form-btn-prev {
+  @apply bg-white text-slate-500 rounded-lg px-4 py-2  mt-20 mb-5;
+}
+
+/*STEP 2*/
+.payment-card-grp {
+  @apply flex justify-between gap-2;
+}
+
+.card {
+  @apply w-36 rounded-lg border border-slate-400 hover:border-slate-800 p-3;
+}
+
+.card-img {
+  @apply mt-2 mb-10;
+}
+
+.card-heading {
+  @apply text-slate-800 font-semibold;
+}
+
+.card-price {
+  @apply text-slate-400 text-sm;
+}
+
+.month-year-grp {
+  @apply flex justify-center align-middle gap-5 mt-16 font-semibold p-2 bg-slate-100 rounded-md;
+}
+
+.month-text {
+  @apply text-slate-800;
+}
+
+.year-text {
+  @apply text-slate-400;
+}
+
+.slider {
+  @apply w-14 h-4 bg-slate-900 rounded-full py-3 px-2.5  relative cursor-pointer;
+}
+
+.choice {
+  @apply bg-white p-2 h-1 w-2 rounded-full absolute bottom-1 left-2.5;
 }

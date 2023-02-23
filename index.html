@@ -24,7 +24,7 @@
         "
       >
         <div class="step">
-          <p class="step-number active-step">1</p>
+          <p class="step-number active-step" id="step-1">1</p>
           <div class="step-text-container">
             <h1 class="step-heading">Step 1</h1>
             <p class="step-text">Your info</p>
@@ -32,7 +32,7 @@
         </div>
 
         <div class="step">
-          <p class="step-number">2</p>
+          <p class="step-number" id="step-2">2</p>
           <div class="step-text-container">
             <h1 class="step-heading">Step 2</h1>
             <p class="step-text">Select plan</p>
@@ -40,7 +40,7 @@
         </div>
 
         <div class="step">
-          <p class="step-number">3</p>
+          <p class="step-number" id="step-3">3</p>
           <div class="step-text-container">
             <h1 class="step-heading">Step 3</h1>
             <p class="step-text">Add-ons</p>
@@ -48,7 +48,7 @@
         </div>
 
         <div class="step">
-          <p class="step-number">4</p>
+          <p class="step-number" id="step-4">4</p>
           <div class="step-text-container">
             <h1 class="step-heading">Step 4</h1>
             <p class="step-text">Summary</p>
@@ -99,7 +99,10 @@
             />
           </div>
 
-          <button class="form-btn">Next Step</button>
+          <div class="btn-grp">
+            <button class="form-btn-prev hidden">Go Back</button>
+            <button class="form-btn-next" id="next-one">Next Step</button>
+          </div>
         </form>
       </section>
     </div>
