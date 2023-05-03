@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-slate-300;
+}
+
+label {
+  @apply font-semibold;
+}
+
+/*OTHER*/
+.container {
+  @apply bg-white flex flex-row  gap-9 w-2/3 mx-auto mt-10 p-3 rounded-lg;
+}
+
+.formContainer {
+  @apply mx-auto py-10;
+}
+
+.formHeading {
+  @apply text-3xl text-textColor mb-2 font-bold;
+}
+
+.formHeadingSub {
+  @apply text-slate-400;
+}
+
+.btn {
+  @apply px-4 py-2 bg-textColor text-white rounded-lg;
+}
+
+.activeNum {
+  @apply bg-sky-300;
+}
+
+.inactiveNum {
+  @apply text-white;
+}
+
+/*STEPS*/
+.stepsContainer {
+  @apply w-64 bg-slate-500 rounded-lg bg-stepsBGMobile lg:bg-stepsBGDesktop bg-no-repeat bg-cover px-4 py-10;
+}
+
+.step {
+  @apply flex flex-row items-center gap-3 mb-5;
+}
+
+.stepNumber {
+  @apply px-3 py-1 rounded-full font-semibold border cursor-pointer;
+}
+
+.stepName1 {
+  @apply text-slate-300 text-sm uppercase;
+}
+
+.stepName2 {
+  @apply text-white uppercase font-semibold;
+}
+
+/*FORM 1 - PERSONAL INFO*/
+#form-1 {
+  @apply mt-6 mb-16;
+}
+
+.formLine {
+  @apply mb-4 flex flex-col;
+}
+
+.formInput {
+  @apply border-2 p-2 rounded-lg cursor-pointer focus:cursor-text;
+}
+
+#firstBtn {
+  @apply ml-auto block;
+}
