@@ -46,7 +46,8 @@
 
       <!--FORM CONTAINER-->
       <div class="formContainer">
-        <div class="firstForm">
+        <!--FIRST FORM-->
+        <div class="firstForm hidden formSection">
           <h1 class="formHeading">Personal info</h1>
           <p class="formHeadingSub">
             Please provide your name,email address and phone number.
@@ -60,6 +61,7 @@
                 class="formInput"
                 id="inputName"
               />
+              <p class="step1Err closeErrText">This field is required</p>
             </div>
             <div class="formLine">
               <label for="">Email Address</label>
@@ -69,6 +71,7 @@
                 class="formInput"
                 id="inputName"
               />
+              <p class="step1Err closeErrText">This field is required</p>
             </div>
             <div class="formLine">
               <label for="">Phone Number</label>
@@ -78,10 +81,143 @@
                 class="formInput"
                 id="inputName"
               />
+              <p class="step1Err closeErrText">This field is required</p>
             </div>
           </form>
 
           <button class="btn" id="firstBtn">Next Step</button>
+        </div>
+
+        <!--SECOND FORM-->
+        <div class="secondForm hidden formSection">
+          <h1 class="formHeading">Select your plan</h1>
+          <p class="formHeadingSub">
+            You have the option of monthly or yearly billing.
+          </p>
+
+          <div class="mt-10">
+            <div class="allPlans">
+              <div class="plan">
+                <img
+                  src="assets/images/icon-arcade.svg"
+                  alt="icon"
+                  class="planImg"
+                />
+                <p class="planText">Arcade</p>
+                <p class="planPrice">$9/mo</p>
+              </div>
+
+              <div class="plan">
+                <img
+                  src="assets/images/icon-advanced.svg"
+                  alt="icon"
+                  class="planImg"
+                />
+                <p class="planText">Advanced</p>
+                <p class="planPrice">$12/mo</p>
+              </div>
+
+              <div class="plan">
+                <img
+                  src="assets/images/icon-pro.svg"
+                  alt="icon"
+                  class="planImg"
+                />
+                <p class="planText">Pro</p>
+                <p class="planPrice">$15/mo</p>
+              </div>
+            </div>
+
+            <div class="planSelection">
+              <p class="selectionText">Monthly</p>
+              <div class="slider"></div>
+              <p class="selectionText">yearly</p>
+            </div>
+
+            <div class="btn-grp">
+              <button class="btn">Go Back</button>
+              <button class="btn">Next Step</button>
+            </div>
+          </div>
+        </div>
+
+        <!--THIRD FORM-->
+        <div class="thirdForm hidden formSection">
+          <h1 class="formHeading">Pick add-ons</h1>
+          <p class="formHeadingSub">
+            Add-ons help enhance your gaming experience.
+          </p>
+
+          <div class="addOnGrp">
+            <div class="addOn">
+              <input type="checkbox" />
+              <div class="addOnInfo">
+                <p class="addOnHeading">Online service</p>
+                <p class="addOnSubText">Access to multiplayer games</p>
+              </div>
+              <p class="addOnPrice">+$1/mo</p>
+            </div>
+
+            <div class="addOn">
+              <input type="checkbox" />
+              <div class="addOnInfo">
+                <p class="addOnHeading">Larger storage</p>
+                <p class="addOnSubText">Extra 1TB of cloud storage</p>
+              </div>
+              <p class="addOnPrice">+$2/mo</p>
+            </div>
+
+            <div class="addOn">
+              <input type="checkbox" />
+              <div class="addOnInfo">
+                <p class="addOnHeading">Customizable profile</p>
+                <p class="addOnSubText">Custom theme on your profile</p>
+              </div>
+              <p class="addOnPrice">+$2/mo</p>
+            </div>
+          </div>
+
+          <div class="btn-grp">
+            <button class="btn">Go Back</button>
+            <button class="btn">Next Step</button>
+          </div>
+        </div>
+
+        <div class="fourthForm formSection">
+          <h1 class="formHeading">Finishing up</h1>
+          <p class="formHeadingSub">
+            Double-check everything looks OK before confirming.
+          </p>
+
+          <div class="summary">
+            <div class="summaryHeadingGrp">
+              <div>
+                <p class="summaryHeading">Arcade (Monthly)</p>
+                <button class="changeBtn">Change</button>
+              </div>
+              <p class="summaryHeadingPrice">$9/mo</p>
+            </div>
+
+            <div class="summaryGrp">
+              <p class="summaryText">Online service</p>
+              <p class="summaryPrice">+$1/mo</p>
+            </div>
+
+            <div class="summaryGrp">
+              <p class="summaryText">Larger storage</p>
+              <p class="summaryPrice">+$2/mo</p>
+            </div>
+          </div>
+
+          <div class="summaryTotal">
+            <p class="totalText">Total (per month)</p>
+            <p class="totalPrice">+$12/mo</p>
+          </div>
+
+          <div class="btn-grp">
+            <button class="btn">Go Back</button>
+            <button class="btn">Next Step</button>
+          </div>
         </div>
       </div>
     </main>
