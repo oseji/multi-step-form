@@ -38,7 +38,7 @@ label {
 }
 
 .formSection {
-  @apply h-105 w-105;
+  @apply h-105 w-105 relative;
 }
 
 .formHeading {
@@ -181,4 +181,21 @@ label {
 
 .totalPrice {
   @apply text-textColor font-bold text-lg;
+}
+
+/*COMPLETED PAGE*/
+.completedMessage {
+  @apply flex flex-col absolute top-1/4;
+}
+
+.completedImg {
+  @apply h-20;
+}
+
+.completedHeading {
+  @apply text-4xl font-bold text-textColor text-center my-6;
+}
+
+.completedText {
+  @apply text-center text-slate-400 text-sm font-semibold;
 }
