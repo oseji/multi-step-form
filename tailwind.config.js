@@ -9,12 +9,14 @@ module.exports = {
       },
       height: {
         105: "426px",
+        120: "500px",
       },
       width: {
         105: "426px",
       },
       colors: {
         textColor: "#2E315A",
+        textColorHover: "#5C61AC",
       },
     },
   },

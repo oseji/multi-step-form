@@ -47,7 +47,7 @@
       <!--FORM CONTAINER-->
       <div class="formContainer">
         <!--FIRST FORM-->
-        <div class="firstForm hidden formSection">
+        <div class="firstForm formSection">
           <h1 class="formHeading">Personal info</h1>
           <p class="formHeadingSub">
             Please provide your name,email address and phone number.
@@ -85,7 +85,7 @@
             </div>
           </form>
 
-          <button class="btn" id="firstBtn">Next Step</button>
+          <button class="btn btnNext" id="firstBtn">Next Step</button>
         </div>
 
         <!--SECOND FORM-->
@@ -103,8 +103,10 @@
                   alt="icon"
                   class="planImg"
                 />
-                <p class="planText">Arcade</p>
-                <p class="planPrice">$9/mo</p>
+                <div>
+                  <p class="planText">Arcade</p>
+                  <p class="planPrice">$9/mo</p>
+                </div>
               </div>
 
               <div class="plan">
@@ -113,8 +115,10 @@
                   alt="icon"
                   class="planImg"
                 />
-                <p class="planText">Advanced</p>
-                <p class="planPrice">$12/mo</p>
+                <div>
+                  <p class="planText">Advanced</p>
+                  <p class="planPrice">$12/mo</p>
+                </div>
               </div>
 
               <div class="plan">
@@ -123,8 +127,10 @@
                   alt="icon"
                   class="planImg"
                 />
-                <p class="planText">Pro</p>
-                <p class="planPrice">$15/mo</p>
+                <div>
+                  <p class="planText">Pro</p>
+                  <p class="planPrice">$15/mo</p>
+                </div>
               </div>
             </div>
 
@@ -135,8 +141,8 @@
             </div>
 
             <div class="btn-grp">
-              <button class="btn">Go Back</button>
-              <button class="btn">Next Step</button>
+              <button class="btn btnBack">Go Back</button>
+              <button class="btn btnNext">Next Step</button>
             </div>
           </div>
         </div>
@@ -178,8 +184,8 @@
           </div>
 
           <div class="btn-grp">
-            <button class="btn">Go Back</button>
-            <button class="btn">Next Step</button>
+            <button class="btn btnBack">Go Back</button>
+            <button class="btn btnNext">Next Step</button>
           </div>
         </div>
 
@@ -215,12 +221,12 @@
           </div>
 
           <div class="btn-grp">
-            <button class="btn">Go Back</button>
-            <button class="btn">Next Step</button>
+            <button class="btn btnBack">Go Back</button>
+            <button class="btn btnNext">Confirm</button>
           </div>
         </div>
 
-        <div class="completedSection formSection">
+        <div class="completedSection hidden formSection">
           <div class="completedMessage">
             <img
               src="assets/images/icon-thank-you.svg"
