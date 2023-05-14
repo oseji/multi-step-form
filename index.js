@@ -26,6 +26,8 @@ const fourthPage = document.querySelector(".fourthForm");
 const completedPage = document.querySelector(".completedSection");
 
 //CODE
+
+//CHANGING STEPS AND PAGES
 stepsContainer.addEventListener("click", (e) => {
   const clicked = e.target.closest(".step");
   const clickedID = clicked.getAttribute("id");
@@ -65,6 +67,7 @@ stepsContainer.addEventListener("click", (e) => {
 const sliderBtn = document.querySelector(".sliderBtn");
 
 sliderBtn.addEventListener("click", () => {
+  //toggling monthly&yearly price&texts
   sliderBtn.classList.toggle("sliderYearly");
 
   document.querySelectorAll(".priceMonth").forEach((item) => {
@@ -74,6 +77,18 @@ sliderBtn.addEventListener("click", () => {
   document.querySelectorAll(".priceYear").forEach((item) => {
     item.classList.toggle("hidden");
   });
+
+  document.querySelectorAll(".addOnPrice").forEach((item) => {
+    item.classList.toggle("hidden");
+  });
+
+  document.querySelector(".summaryHeadingPrice").classList.toggle("hidden");
+
+  document.querySelector(".totalPrice").classList.toggle("hidden");
+
+  document.querySelector(".summaryHeading").classList.toggle("hidden");
+
+  document.querySelector(".summaryHeadingYearly").classList.toggle("hidden");
 });
 
 //PREVIOUS AND NEXT BUTTONS
@@ -93,31 +108,64 @@ prevNextbtns.forEach((btn) => {
     });
 
     if (btn.getAttribute("id") == "firstBtn") {
-      secondPage.classList.remove("hidden");
-      step2.classList.add(`activeNum`);
-      step2.classList.remove(`inactiveNum`);
-    } else if (btn.getAttribute("id") == "nextBtn2") {
-      thirdPage.classList.remove("hidden");
-      step3.classList.add(`activeNum`);
-      step3.classList.remove(`inactiveNum`);
-    } else if (btn.getAttribute("id") == "nextBtn3") {
-      fourthPage.classList.remove("hidden");
-      step4.classList.add(`activeNum`);
-      step4.classList.remove(`inactiveNum`);
-    } else if (btn.getAttribute("id") == "nextBtn4") {
-      completedPage.classList.remove("hidden");
-    } else if (btn.getAttribute("id") == "backBtn1") {
-      firstPage.classList.remove("hidden");
-      step1.classList.add(`activeNum`);
-      step1.classList.remove(`inactiveNum`);
-    } else if (btn.getAttribute("id") == "backBtn2") {
-      secondPage.classList.remove("hidden");
-      step2.classList.add(`activeNum`);
-      step2.classList.remove(`inactiveNum`);
-    } else if (btn.getAttribute("id") == "backBtn3") {
-      thirdPage.classList.remove("hidden");
-      step3.classList.add(`activeNum`);
-      step3.classList.remove(`inactiveNum`);
+      //FORM VALIDATION FOR PERSONAL DATA
+      if (userName.value == "") {
+        console.log("not a name", userName.value);
+      } else {
+        console.log("valid name");
+      }
+
+      if (phoneNumber.value == "") {
+        console.log("not a number");
+      } else {
+        console.log("valid number");
+      }
+
+      if (emailAddress.value.includes("@")) {
+        console.log("valid email");
+      } else {
+        console.log("invalid email");
+      }
+      //
+
+      //if all personal data is correctly filled then progress
+      if (
+        userName.value !== "" &&
+        phoneNumber.value !== "" &&
+        emailAddress.value.includes("@")
+      ) {
+        console.log("valid....you can proceed");
+        secondPage.classList.remove("hidden");
+        step2.classList.add(`activeNum`);
+        step2.classList.remove(`inactiveNum`);
+      } else {
+        console.log("cant progress yet");
+        firstPage.classList.remove("hidden");
+      }
+
+      if (btn.getAttribute("id") == "nextBtn2") {
+        thirdPage.classList.remove("hidden");
+        step3.classList.add(`activeNum`);
+        step3.classList.remove(`inactiveNum`);
+      } else if (btn.getAttribute("id") == "nextBtn3") {
+        fourthPage.classList.remove("hidden");
+        step4.classList.add(`activeNum`);
+        step4.classList.remove(`inactiveNum`);
+      } else if (btn.getAttribute("id") == "nextBtn4") {
+        completedPage.classList.remove("hidden");
+      } else if (btn.getAttribute("id") == "backBtn1") {
+        firstPage.classList.remove("hidden");
+        step1.classList.add(`activeNum`);
+        step1.classList.remove(`inactiveNum`);
+      } else if (btn.getAttribute("id") == "backBtn2") {
+        secondPage.classList.remove("hidden");
+        step2.classList.add(`activeNum`);
+        step2.classList.remove(`inactiveNum`);
+      } else if (btn.getAttribute("id") == "backBtn3") {
+        thirdPage.classList.remove("hidden");
+        step3.classList.add(`activeNum`);
+        step3.classList.remove(`inactiveNum`);
+      }
     }
   });
 });

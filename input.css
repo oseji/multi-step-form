@@ -129,8 +129,16 @@ label {
   @apply text-sm text-slate-400;
 }
 
+.priceYear {
+  @apply ml-auto;
+}
+
+.planPrice2 {
+  @apply text-sm text-textColor;
+}
+
 .promo {
-  @apply text-textColor text-xs;
+  @apply text-textColor text-xs mt-1;
 }
 
 .planSelection {
@@ -192,6 +200,10 @@ label {
 }
 
 .summaryHeading {
+  @apply text-textColor font-semibold;
+}
+
+.summaryHeadingYearly {
   @apply text-textColor font-semibold;
 }
 

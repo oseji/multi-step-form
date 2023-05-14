@@ -906,7 +906,19 @@ label {
   color: rgb(148 163 184 / var(--tw-text-opacity));
 }
 
+.priceYear {
+  margin-left: auto;
+}
+
+.planPrice2 {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  --tw-text-opacity: 1;
+  color: rgb(46 49 90 / var(--tw-text-opacity));
+}
+
 .promo {
+  margin-top: 0.25rem;
   font-size: 0.75rem;
   line-height: 1rem;
   --tw-text-opacity: 1;
@@ -1049,6 +1061,12 @@ label {
 }
 
 .summaryHeading {
+  font-weight: 600;
+  --tw-text-opacity: 1;
+  color: rgb(46 49 90 / var(--tw-text-opacity));
+}
+
+.summaryHeadingYearly {
   font-weight: 600;
   --tw-text-opacity: 1;
   color: rgb(46 49 90 / var(--tw-text-opacity));
