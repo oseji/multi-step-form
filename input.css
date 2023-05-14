@@ -13,11 +13,11 @@ label {
 /*ACTIVE AND INACTIVE STATES*/
 
 .activeNum {
-  @apply bg-sky-300;
+  @apply bg-sky-300 text-black;
 }
 
 .inactiveNum {
-  @apply text-white;
+  @apply bg-transparent text-white;
 }
 
 .openErrText {
@@ -67,11 +67,11 @@ label {
 }
 
 .step {
-  @apply flex flex-row items-center gap-3 mb-6;
+  @apply flex flex-row items-center gap-3 mb-6 cursor-pointer;
 }
 
 .stepNumber {
-  @apply px-3 py-1 rounded-full font-semibold border cursor-pointer;
+  @apply px-3 py-1 rounded-full font-semibold text-center border transition ease-in duration-200;
 }
 
 .stepText {
@@ -114,7 +114,7 @@ label {
 }
 
 .plan {
-  @apply flex flex-row lg:flex-col gap-5 lg:gap-0 items-center w-full lg:w-1/3 border hover:border-textColor rounded-lg p-3.5 cursor-pointer transition ease-in duration-200;
+  @apply flex flex-row lg:flex-col gap-5 lg:gap-0 items-center lg:items-start w-full lg:w-1/3 border hover:border-textColor rounded-lg p-3.5 cursor-pointer transition ease-in duration-200;
 }
 
 .planImg {
@@ -122,15 +122,35 @@ label {
 }
 
 .planText {
-  @apply text-sm text-textColor font-semibold;
+  @apply text-textColor font-semibold;
 }
 
 .planPrice {
-  @apply text-xs text-slate-400;
+  @apply text-sm text-slate-400;
+}
+
+.promo {
+  @apply text-textColor text-xs;
 }
 
 .planSelection {
-  @apply flex flex-row justify-center mb-10 lg:mb-20;
+  @apply flex flex-row justify-center items-center gap-4 mb-10 lg:mb-20;
+}
+
+.selectionText {
+  @apply font-semibold text-textColor text-center text-sm;
+}
+
+.slider {
+  @apply w-14 h-6 bg-textColor py-0.5 px-1 rounded-full;
+}
+
+.sliderBtn {
+  @apply h-4 w-4 mt-0.5 block bg-white rounded-full transition ease-in duration-200;
+}
+
+.sliderYearly {
+  @apply translate-x-full;
 }
 
 .btn-grp {

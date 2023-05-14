@@ -18,6 +18,9 @@ module.exports = {
         textColor: "#2E315A",
         textColorHover: "#5C61AC",
       },
+      translate: {
+        full: "200%",
+      },
     },
   },
   plugins: [],

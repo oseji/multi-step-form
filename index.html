@@ -12,7 +12,7 @@
       <!--STEPS CONTAINER-->
       <div class="stepsContainer">
         <div class="step" id="step-1">
-          <p class="stepNumber activeNum">1</p>
+          <p class="stepNumber activeNum" id="num-1">1</p>
           <div class="stepText">
             <p class="stepName1">Step 1</p>
             <p class="stepName2">your info</p>
@@ -20,7 +20,7 @@
         </div>
 
         <div class="step" id="step-2">
-          <p class="stepNumber inactiveNum">2</p>
+          <p class="stepNumber inactiveNum" id="num-2">2</p>
           <div class="stepText">
             <p class="stepName1">Step 2</p>
             <p class="stepName2">select plan</p>
@@ -28,7 +28,7 @@
         </div>
 
         <div class="step" id="step-3">
-          <p class="stepNumber inactiveNum">3</p>
+          <p class="stepNumber inactiveNum" id="num-3">3</p>
           <div class="stepText">
             <p class="stepName1">Step 3</p>
             <p class="stepName2">add-ons</p>
@@ -36,7 +36,7 @@
         </div>
 
         <div class="step" id="step-4">
-          <p class="stepNumber inactiveNum">4</p>
+          <p class="stepNumber inactiveNum" id="num-4">4</p>
           <div class="stepText">
             <p class="stepName1">Step 4</p>
             <p class="stepName2">summary</p>
@@ -69,7 +69,7 @@
                 type="email"
                 placeholder="e.g. stephenking@lorem.com"
                 class="formInput"
-                id="inputName"
+                id="inputEmail"
               />
               <p class="step1Err closeErrText">This field is required</p>
             </div>
@@ -79,7 +79,7 @@
                 type="number"
                 placeholder="e.g. +1 234 567 890"
                 class="formInput"
-                id="inputName"
+                id="inputNumber"
               />
               <p class="step1Err closeErrText">This field is required</p>
             </div>
@@ -105,7 +105,11 @@
                 />
                 <div>
                   <p class="planText">Arcade</p>
-                  <p class="planPrice">$9/mo</p>
+                  <p class="planPrice priceMonth">$9/mo</p>
+                  <div class="priceYear hidden">
+                    <p class="planPrice">$90/yr</p>
+                    <p class="promo">2 month free</p>
+                  </div>
                 </div>
               </div>
 
@@ -117,7 +121,11 @@
                 />
                 <div>
                   <p class="planText">Advanced</p>
-                  <p class="planPrice">$12/mo</p>
+                  <p class="planPrice priceMonth">$12/mo</p>
+                  <div class="priceYear hidden">
+                    <p class="planPrice">$120/yr</p>
+                    <p class="promo">2 month free</p>
+                  </div>
                 </div>
               </div>
 
@@ -129,20 +137,24 @@
                 />
                 <div>
                   <p class="planText">Pro</p>
-                  <p class="planPrice">$15/mo</p>
+                  <p class="planPrice priceMonth">$15/mo</p>
+                  <div class="priceYear hidden">
+                    <p class="planPrice">$150/yr</p>
+                    <p class="promo">2 month free</p>
+                  </div>
                 </div>
               </div>
             </div>
 
             <div class="planSelection">
               <p class="selectionText">Monthly</p>
-              <div class="slider"></div>
-              <p class="selectionText">yearly</p>
+              <div class="slider"><button class="sliderBtn"></button></div>
+              <p class="selectionText">Yearly</p>
             </div>
 
             <div class="btn-grp">
-              <button class="btn btnBack">Go Back</button>
-              <button class="btn btnNext">Next Step</button>
+              <button class="btn btnBack" id="backBtn1">Go Back</button>
+              <button class="btn btnNext" id="nextBtn2">Next Step</button>
             </div>
           </div>
         </div>
@@ -184,11 +196,12 @@
           </div>
 
           <div class="btn-grp">
-            <button class="btn btnBack">Go Back</button>
-            <button class="btn btnNext">Next Step</button>
+            <button class="btn btnBack" id="backBtn2">Go Back</button>
+            <button class="btn btnNext" id="nextBtn3">Next Step</button>
           </div>
         </div>
 
+        <!--FOURTH FORM-->
         <div class="fourthForm hidden formSection">
           <h1 class="formHeading">Finishing up</h1>
           <p class="formHeadingSub">
@@ -221,11 +234,12 @@
           </div>
 
           <div class="btn-grp">
-            <button class="btn btnBack">Go Back</button>
-            <button class="btn btnNext">Confirm</button>
+            <button class="btn btnBack" id="backBtn3">Go Back</button>
+            <button class="btn btnNext" id="nextBtn4">Confirm</button>
           </div>
         </div>
 
+        <!--COMPLETED-->
         <div class="completedSection hidden formSection">
           <div class="completedMessage">
             <img
@@ -243,5 +257,6 @@
         </div>
       </div>
     </main>
+    <script src="index.js"></script>
   </body>
 </html>
