@@ -126,7 +126,6 @@ prevNextbtns.forEach((btn) => {
       } else {
         console.log("invalid email");
       }
-      //
 
       //if all personal data is correctly filled then progress
       if (
@@ -142,30 +141,30 @@ prevNextbtns.forEach((btn) => {
         console.log("cant progress yet");
         firstPage.classList.remove("hidden");
       }
+    }
 
-      if (btn.getAttribute("id") == "nextBtn2") {
-        thirdPage.classList.remove("hidden");
-        step3.classList.add(`activeNum`);
-        step3.classList.remove(`inactiveNum`);
-      } else if (btn.getAttribute("id") == "nextBtn3") {
-        fourthPage.classList.remove("hidden");
-        step4.classList.add(`activeNum`);
-        step4.classList.remove(`inactiveNum`);
-      } else if (btn.getAttribute("id") == "nextBtn4") {
-        completedPage.classList.remove("hidden");
-      } else if (btn.getAttribute("id") == "backBtn1") {
-        firstPage.classList.remove("hidden");
-        step1.classList.add(`activeNum`);
-        step1.classList.remove(`inactiveNum`);
-      } else if (btn.getAttribute("id") == "backBtn2") {
-        secondPage.classList.remove("hidden");
-        step2.classList.add(`activeNum`);
-        step2.classList.remove(`inactiveNum`);
-      } else if (btn.getAttribute("id") == "backBtn3") {
-        thirdPage.classList.remove("hidden");
-        step3.classList.add(`activeNum`);
-        step3.classList.remove(`inactiveNum`);
-      }
+    if (btn.getAttribute("id") == "nextBtn2") {
+      thirdPage.classList.remove("hidden");
+      step3.classList.add(`activeNum`);
+      step3.classList.remove(`inactiveNum`);
+    } else if (btn.getAttribute("id") == "nextBtn3") {
+      fourthPage.classList.remove("hidden");
+      step4.classList.add(`activeNum`);
+      step4.classList.remove(`inactiveNum`);
+    } else if (btn.getAttribute("id") == "nextBtn4") {
+      completedPage.classList.remove("hidden");
+    } else if (btn.getAttribute("id") == "backBtn1") {
+      firstPage.classList.remove("hidden");
+      step1.classList.add(`activeNum`);
+      step1.classList.remove(`inactiveNum`);
+    } else if (btn.getAttribute("id") == "backBtn2") {
+      secondPage.classList.remove("hidden");
+      step2.classList.add(`activeNum`);
+      step2.classList.remove(`inactiveNum`);
+    } else if (btn.getAttribute("id") == "backBtn3") {
+      thirdPage.classList.remove("hidden");
+      step3.classList.add(`activeNum`);
+      step3.classList.remove(`inactiveNum`);
     }
   });
 });

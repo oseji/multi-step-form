@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  @apply bg-slate-300;
+  @apply bg-slate-200;
 }
 
 label {
@@ -30,7 +30,7 @@ label {
 
 /*OTHER*/
 .container {
-  @apply relative bg-white flex flex-col lg:flex-row lg:gap-9  w-full lg:w-2/3 mx-auto lg:mt-5 lg:p-3 lg:rounded-lg;
+  @apply relative bg-white flex flex-col lg:flex-row lg:gap-9  w-full lg:w-2/3 mx-auto lg:mt-10 lg:p-3 lg:rounded-lg;
 }
 
 .formContainer {
@@ -142,7 +142,7 @@ label {
 }
 
 .planSelection {
-  @apply flex flex-row justify-center items-center gap-4 mb-10 lg:mb-20;
+  @apply flex flex-row justify-center items-center gap-4 mb-10 lg:mb-14;
 }
 
 .selectionText {
@@ -167,7 +167,7 @@ label {
 
 /*STEP 3 - ADD-ONS*/
 .addOnGrp {
-  @apply mt-10 mb-5;
+  @apply mt-10 mb-10;
 }
 
 .addOn {

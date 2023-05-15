@@ -557,7 +557,7 @@ video {
 
 body {
   --tw-bg-opacity: 1;
-  background-color: rgb(203 213 225 / var(--tw-bg-opacity));
+  background-color: rgb(226 232 240 / var(--tw-bg-opacity));
 }
 
 label {
@@ -606,7 +606,7 @@ label {
 
 @media (min-width: 1024px) {
   .container {
-    margin-top: 1.25rem;
+    margin-top: 2.5rem;
     width: 66.666667%;
     flex-direction: row;
     gap: 2.25rem;
@@ -936,7 +936,7 @@ label {
 
 @media (min-width: 1024px) {
   .planSelection {
-    margin-bottom: 5rem;
+    margin-bottom: 3.5rem;
   }
 }
 
@@ -992,7 +992,7 @@ label {
 
 .addOnGrp {
   margin-top: 2.5rem;
-  margin-bottom: 1.25rem;
+  margin-bottom: 2.5rem;
 }
 
 .addOn {
