@@ -1,0 +1,208 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  @apply bg-slate-400;
+}
+
+.HomePage {
+  @apply w-3/4 mx-auto flex flex-row gap-10 justify-start mt-3 bg-white p-3 rounded-lg;
+}
+
+/* STEP CONTAINER */
+.stepsContainer {
+  @apply w-72 h-100 flex flex-col gap-8 p-5 rounded-xl bg-bgMobile lg:bg-bgDesktop bg-no-repeat bg-contain text-white font-semibold;
+}
+
+.step {
+  @apply flex flex-row gap-3 items-center;
+}
+
+.stepDetails {
+  @apply flex flex-col;
+}
+
+.stepNumber {
+  @apply px-2.5 py-1 text-sm rounded-full  border border-white hover:scale-125 transition ease-in-out duration-300;
+}
+
+.stepNumberActive {
+  @apply bg-blue-400 text-black;
+}
+
+.stepName {
+  @apply text-sm text-pastelBlue;
+}
+
+.stepDesc {
+  @apply uppercase;
+}
+
+/* FORMS */
+.formsContainer {
+  @apply w-100;
+}
+
+/* .stepFrom {
+  @apply w-98 h-98;
+} */
+
+.formHeading {
+  @apply text-3xl text-marineBlue mb-4 mt-8 font-bold;
+}
+
+.subHeading {
+  @apply text-slate-500;
+}
+
+/* INPUTS */
+.inputGrpSection {
+  @apply flex flex-col gap-5 mt-6 text-sm;
+}
+
+.inputGrp {
+  @apply flex flex-col gap-1;
+}
+
+.labelGrp {
+  @apply flex flex-row justify-between;
+}
+
+label {
+  @apply capitalize text-marineBlue font-semibold;
+}
+
+.errLabel {
+  @apply text-red-600 font-semibold;
+}
+
+.inputField {
+  @apply p-2 rounded-lg border;
+}
+.inputFieldBorder {
+  @apply border-slate-600;
+}
+.inputErrBorder {
+  @apply border-red-600;
+}
+
+.nextBtn,
+.prevBtn,
+.confirmBtn {
+  @apply px-5 py-2 mt-14 block capitalize font-semibold  rounded-lg hover:scale-105 transition ease-in-out duration-200;
+}
+
+.nextBtn {
+  @apply bg-marineBlue text-white ml-auto;
+}
+
+.prevBtn {
+  @apply text-slate-400;
+}
+
+.confirmBtn {
+  @apply bg-purplishBlue text-white ml-auto;
+}
+
+.btnGrp {
+  @apply flex flex-row justify-between;
+}
+
+/* STEP 2 */
+.cardGrp {
+  @apply flex flex-row gap-5 justify-between mt-10;
+}
+
+.cardContainer {
+  @apply h-36 w-32 border border-marineBlue p-3 rounded-lg flex flex-col items-start justify-between cursor-pointer;
+}
+
+.cardImg {
+  @apply h-8;
+}
+
+.cardName {
+  @apply text-marineBlue font-semibold;
+}
+
+.cardPrice {
+  @apply text-slate-400 text-sm;
+}
+
+.monthlyYearlyGrp {
+  @apply flex flex-row justify-center items-center gap-5 mt-7 p-2 rounded-lg bg-slate-200 text-slate-400;
+}
+
+.monthlyYearlyText {
+  @apply font-semibold;
+}
+
+.slider {
+  @apply h-6 w-14 p-1 rounded-full bg-marineBlue;
+}
+
+.dot {
+  @apply w-4 h-4 rounded-full bg-white cursor-pointer;
+}
+
+.MYtextActive {
+  @apply text-marineBlue;
+}
+
+/* STEP 3 */
+.addOnGrp {
+  @apply flex flex-col gap-5 mt-10 text-sm;
+}
+
+.addOn {
+  @apply flex flex-row justify-between items-center bg-slate-200 border border-purplishBlue p-3 rounded-lg cursor-pointer;
+}
+
+.checkGrp {
+  @apply flex flex-row items-center gap-6;
+}
+
+.addOnText {
+  @apply text-slate-400;
+}
+
+.addOnHeading {
+  @apply text-marineBlue font-semibold;
+}
+
+.addonPrice {
+  @apply text-purplishBlue;
+}
+
+/* STEP 4 */
+.checkoutContainer {
+  @apply mt-10 p-3 rounded-lg bg-slate-100 text-sm;
+}
+
+.change {
+  @apply underline text-slate-400;
+}
+
+.checkoutHeadingGrp,
+.checkout {
+  @apply flex flex-row justify-between items-center;
+}
+
+.checkoutHeadingGrp {
+  @apply border-b border-slate-300 pb-4;
+}
+
+.checkoutHeading,
+.headingPrice {
+  @apply font-bold text-marineBlue;
+}
+
+.checkoutTotalGrp {
+  @apply flex flex-row justify-between items-center mt-10 px-6 text-sm;
+}
+
+/* COMPETED PAGE */
+.completedPage {
+  @apply mt-16;
+}
