@@ -7,12 +7,12 @@ html {
 }
 
 .HomePage {
-  @apply w-3/4 mx-auto flex flex-row gap-10 justify-start mt-3 bg-white p-3 rounded-lg;
+  @apply relative lg:w-3/4 mx-auto flex flex-col lg:flex-row lg:gap-10 justify-start lg:mt-3 lg:p-3 rounded-lg lg:bg-white;
 }
 
 /* STEP CONTAINER */
 .stepsContainer {
-  @apply w-72 h-100 flex flex-col gap-8 p-5 rounded-xl bg-bgMobile lg:bg-bgDesktop bg-no-repeat bg-contain text-white font-semibold;
+  @apply lg:w-72 h-48 lg:h-100 flex flex-row lg:flex-col justify-center lg:justify-start gap-8 p-5 lg:rounded-xl bg-bgMobile lg:bg-bgDesktop bg-no-repeat bg-contain text-white font-semibold;
 }
 
 .step {
@@ -20,11 +20,11 @@ html {
 }
 
 .stepDetails {
-  @apply flex flex-col;
+  @apply hidden lg:flex flex-col;
 }
 
 .stepNumber {
-  @apply px-2.5 py-1 text-sm rounded-full  border border-white hover:scale-125 transition ease-in-out duration-300;
+  @apply px-3.5 py-2 lg:px-2.5 lg:py-1 text-sm rounded-full  border border-white hover:scale-125 transition ease-in-out duration-300;
 }
 
 .stepNumberActive {
@@ -41,12 +41,8 @@ html {
 
 /* FORMS */
 .formsContainer {
-  @apply w-100;
+  @apply relative bottom-20 lg:bottom-0 w-11/12 mx-auto lg:mx-0 lg:w-100 h-formContainerMobile bg-white p-5 rounded-xl lg:p-0;
 }
-
-/* .stepFrom {
-  @apply w-98 h-98;
-} */
 
 .formHeading {
   @apply text-3xl text-marineBlue mb-4 mt-8 font-bold;
@@ -101,12 +97,17 @@ label {
   @apply text-slate-400;
 }
 
+.nextBtn,
+.prevBtn {
+  @apply relative top-full;
+}
+
 .confirmBtn {
   @apply bg-purplishBlue text-white ml-auto;
 }
 
 .btnGrp {
-  @apply flex flex-row justify-between;
+  @apply flex flex-row justify-between mt-auto;
 }
 
 /* STEP 2 */
@@ -115,7 +116,11 @@ label {
 }
 
 .cardContainer {
-  @apply h-36 w-32 border border-marineBlue p-3 rounded-lg flex flex-col items-start justify-between cursor-pointer;
+  @apply h-36 w-32 border  p-3 rounded-lg flex flex-col items-start justify-between hover:border-marineBlue cursor-pointer transition ease-in-out duration-300;
+}
+
+.cardSelected {
+  @apply bg-slate-100 border-marineBlue;
 }
 
 .cardImg {
@@ -131,7 +136,7 @@ label {
 }
 
 .monthlyYearlyGrp {
-  @apply flex flex-row justify-center items-center gap-5 mt-7 p-2 rounded-lg bg-slate-200 text-slate-400;
+  @apply flex flex-row justify-center items-center gap-5 mt-7 p-2 rounded-lg bg-slate-100 text-slate-400;
 }
 
 .monthlyYearlyText {
@@ -139,11 +144,14 @@ label {
 }
 
 .slider {
-  @apply h-6 w-14 p-1 rounded-full bg-marineBlue;
+  @apply h-6 w-14 p-1 rounded-full bg-marineBlue cursor-pointer;
 }
 
 .dot {
-  @apply w-4 h-4 rounded-full bg-white cursor-pointer;
+  @apply w-4 h-4 rounded-full bg-white  transition ease-in-out duration-500;
+}
+.dotTransition {
+  @apply translate-x-end;
 }
 
 .MYtextActive {

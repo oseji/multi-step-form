@@ -16,6 +16,7 @@ const Step1 = () => {
     });
   }, []);
 
+  //setting conditions to allow progress to step 2
   useEffect(() => {
     if (name && email && number !== "") {
       setCompleted(true);
@@ -23,35 +24,34 @@ const Step1 = () => {
     }
   }, [name, email, number]);
 
-  const nameErr = errLabelRefs[0].current;
-  const emailErr = errLabelRefs[2].current;
-  const numberErr = errLabelRefs[1].current;
-
   const progress = (e) => {
     e.preventDefault();
+    const nameErr = errLabelRefs[0].current;
+    const emailErr = errLabelRefs[1].current;
+    const numberErr = errLabelRefs[2].current;
 
     if (name && email && number !== "") {
       setCompleted(true);
       console.log("completed");
     }
 
-    // if (name === "") {
-    //   nameErr.classList.remove("hidden");
-    // } else if (name !== "") {
-    //   nameErr.classList.add("hidden");
-    // }
+    if (name === "") {
+      nameErr.classList.remove("hidden");
+    } else if (name !== "") {
+      nameErr.classList.add("hidden");
+    }
 
-    // if (email === "") {
-    //   emailErr.classList.remove("hidden");
-    // } else if (email !== "") {
-    //   emailErr.classList.add("hidden");
-    // }
+    if (email === "") {
+      emailErr.classList.remove("hidden");
+    } else if (email !== "") {
+      emailErr.classList.add("hidden");
+    }
 
-    // if (number === "") {
-    //   numberErr.classList.remove("hidden");
-    // } else if (number !== "") {
-    //   numberErr.classList.add("hidden");
-    // }
+    if (number === "") {
+      numberErr.classList.remove("hidden");
+    } else if (number !== "") {
+      numberErr.classList.add("hidden");
+    }
   };
 
   return (
@@ -74,7 +74,6 @@ const Step1 = () => {
             type="text"
             placeholder="e.g. Stephen King"
             className="inputField inputFieldBorder"
-            required
             value={name}
             onChange={(e) => setName(e.target.value)}
           />
@@ -92,7 +91,6 @@ const Step1 = () => {
             type="email"
             placeholder="e.g. stephenking@lorem.com"
             className="inputField inputFieldBorder"
-            required
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
@@ -110,7 +108,6 @@ const Step1 = () => {
             type="number"
             placeholder="e.g. +1 234 567 890"
             className="inputField inputFieldBorder"
-            required
             value={number}
             onChange={(e) => setNumber(e.target.value)}
           />
