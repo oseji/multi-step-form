@@ -28,7 +28,7 @@ const Step2 = () => {
 
   //console.log(cardContainerRefs);
 
-  const handlePriceChange = (e) => {
+  const handleSliderLogic = (e) => {
     const dot = dotRef.current;
 
     dot.classList.toggle("dotTransition");
@@ -128,7 +128,7 @@ const Step2 = () => {
         <p className="monthlyYearlyText MYtextActive" ref={sliderText[0]}>
           Monthly
         </p>
-        <div className="slider" onClick={handlePriceChange}>
+        <div className="slider" onClick={handleSliderLogic}>
           <div className="dot" ref={dotRef}></div>
         </div>
         <p className="monthlyYearlyText" ref={sliderText[1]}>

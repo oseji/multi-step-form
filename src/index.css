@@ -12,7 +12,8 @@ html {
 
 /* STEP CONTAINER */
 .stepsContainer {
-  @apply lg:w-72 h-48 lg:h-100 flex flex-row lg:flex-col justify-center lg:justify-start gap-8 p-5 lg:rounded-xl bg-bgMobile lg:bg-bgDesktop bg-no-repeat bg-contain text-white font-semibold;
+  @apply lg:w-72 h-48
+  lg:h-100 flex flex-row lg:flex-col justify-center lg:justify-start gap-8 p-5 lg:rounded-xl bg-bgMobile lg:bg-bgDesktop bg-no-repeat bg-contain text-white font-semibold;
 }
 
 .step {
@@ -41,7 +42,7 @@ html {
 
 /* FORMS */
 .formsContainer {
-  @apply relative bottom-20 lg:bottom-0 w-11/12 mx-auto lg:mx-0 lg:w-100 h-formContainerMobile bg-white p-5 rounded-xl lg:p-0;
+  @apply relative bottom-20 lg:bottom-0 w-11/12 mx-auto lg:mx-0 lg:w-100  bg-white p-5 rounded-xl lg:p-0;
 }
 
 .formHeading {
@@ -95,11 +96,6 @@ label {
 
 .prevBtn {
   @apply text-slate-400;
-}
-
-.nextBtn,
-.prevBtn {
-  @apply relative top-full;
 }
 
 .confirmBtn {
