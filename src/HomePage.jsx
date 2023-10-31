@@ -1,4 +1,11 @@
-import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  Link,
+  useLocation,
+} from "react-router-dom";
+import { motion, AnimatePresence } from "framer-motion";
 
 import Step1 from "./Step1";
 import Step2 from "./Step2";
@@ -9,6 +16,9 @@ import { useRef } from "react";
 
 const HomePage = () => {
   const stepNumRefs = [useRef(null), useRef(null), useRef(null), useRef(null)];
+
+  const routeLocation = useLocation();
+  console.log(routeLocation);
 
   const handleStepClass = (e) => {
     const clicked = e.target;
@@ -26,79 +36,79 @@ const HomePage = () => {
 
   return (
     <section className="HomePage">
-      <Router>
-        <div className="stepsContainer">
-          <Link to="/">
-            <div className="step">
-              <div
-                className="stepNumber stepNumberActive"
-                ref={stepNumRefs[0]}
-                onClick={handleStepClass}
-              >
-                1
-              </div>
-
-              <div className="stepDetails">
-                <div className="stepName">Step 1</div>
-                <div className="stepDesc">your info</div>
-              </div>
+      <div className="stepsContainer">
+        <Link to="/">
+          <div className="step">
+            <div
+              className="stepNumber stepNumberActive"
+              ref={stepNumRefs[0]}
+              onClick={handleStepClass}
+            >
+              1
             </div>
-          </Link>
 
-          <Link to="./Step2">
-            <div className="step">
-              <div
-                className="stepNumber"
-                ref={stepNumRefs[1]}
-                onClick={handleStepClass}
-              >
-                2
-              </div>
-
-              <div className="stepDetails">
-                <div className="stepName">Step 2</div>
-                <div className="stepDesc">select plan</div>
-              </div>
+            <div className="stepDetails">
+              <div className="stepName">Step 1</div>
+              <div className="stepDesc">your info</div>
             </div>
-          </Link>
+          </div>
+        </Link>
 
-          <Link to="./Step3">
-            <div className="step">
-              <div
-                className="stepNumber"
-                ref={stepNumRefs[2]}
-                onClick={handleStepClass}
-              >
-                3
-              </div>
-
-              <div className="stepDetails">
-                <div className="stepName">Step 3</div>
-                <div className="stepDesc">add ons</div>
-              </div>
+        <Link to="./Step2">
+          <div className="step">
+            <div
+              className="stepNumber"
+              ref={stepNumRefs[1]}
+              onClick={handleStepClass}
+            >
+              2
             </div>
-          </Link>
 
-          <Link to="./Step4">
-            <div className="step">
-              <div
-                className="stepNumber"
-                ref={stepNumRefs[3]}
-                onClick={handleStepClass}
-              >
-                4
-              </div>
-
-              <div className="stepDetails">
-                <div className="stepName">Step 4</div>
-                <div className="stepDesc">summary</div>
-              </div>
+            <div className="stepDetails">
+              <div className="stepName">Step 2</div>
+              <div className="stepDesc">select plan</div>
             </div>
-          </Link>
-        </div>
+          </div>
+        </Link>
 
+        <Link to="./Step3">
+          <div className="step">
+            <div
+              className="stepNumber"
+              ref={stepNumRefs[2]}
+              onClick={handleStepClass}
+            >
+              3
+            </div>
+
+            <div className="stepDetails">
+              <div className="stepName">Step 3</div>
+              <div className="stepDesc">add ons</div>
+            </div>
+          </div>
+        </Link>
+
+        <Link to="./Step4">
+          <div className="step">
+            <div
+              className="stepNumber"
+              ref={stepNumRefs[3]}
+              onClick={handleStepClass}
+            >
+              4
+            </div>
+
+            <div className="stepDetails">
+              <div className="stepName">Step 4</div>
+              <div className="stepDesc">summary</div>
+            </div>
+          </div>
+        </Link>
+      </div>
+
+      <AnimatePresence>
         <div className="formsContainer">
-          <Switch>
+          <Switch location={routeLocation} key={routeLocation.key}>
             <Route exact path="/">
               <Step1></Step1>
             </Route>
@@ -119,8 +129,8 @@ const HomePage = () => {
               <Completed></Completed>
             </Route>
           </Switch>
-        </div>
-      </Router>
+        </div>{" "}
+      </AnimatePresence>
     </section>
   );
 };

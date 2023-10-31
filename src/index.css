@@ -7,7 +7,7 @@ html {
 }
 
 .HomePage {
-  @apply relative lg:w-3/4 mx-auto flex flex-col lg:flex-row lg:gap-10 justify-start lg:mt-3 lg:p-3 rounded-lg lg:bg-white;
+  @apply relative lg:w-3/4 h-auto mx-auto flex flex-col lg:flex-row lg:gap-10 justify-start lg:mt-3 lg:p-3 rounded-lg lg:bg-white;
 }
 
 /* STEP CONTAINER */
@@ -41,8 +41,12 @@ html {
 }
 
 /* FORMS */
-.formsContainer {
-  @apply relative bottom-20 lg:bottom-0 w-11/12 mx-auto lg:mx-0 lg:w-100  bg-white p-5 rounded-xl lg:p-0;
+/* .formsContainer {
+  @apply relative bottom-20 lg:bottom-0 w-11/12  mx-auto lg:mx-0 lg:w-100  bg-white p-5 rounded-xl lg:p-0;
+} */
+
+.stepForm {
+  @apply relative bottom-20 lg:bottom-0 w-11/12  mx-auto lg:mx-0 lg:w-100  bg-white p-5 rounded-xl lg:p-0;
 }
 
 .formHeading {
@@ -208,5 +212,5 @@ label {
 
 /* COMPETED PAGE */
 .completedPage {
-  @apply mt-16;
+  @apply relative bottom-20 lg:bottom-0 w-11/12  mx-auto lg:mx-0 lg:w-100  bg-white p-5 rounded-xl lg:p-0 mt-16;
 }

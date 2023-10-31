@@ -1,8 +1,34 @@
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const Step4 = () => {
+  const containerVariants = {
+    hidden: {
+      opacity: 0,
+      height: 0,
+      y: 20,
+    },
+    visible: {
+      opacity: 1,
+      height: "auto",
+      y: 0,
+      transition: { duration: 0.7 },
+    },
+    exit: {
+      x: "25%",
+      opacity: 0,
+    },
+  };
+
   return (
-    <form action="" className="step4">
+    <motion.form
+      action=""
+      className="stepForm"
+      variants={containerVariants}
+      initial="hidden"
+      animate="visible"
+      exit="exit"
+    >
       <h1 className="formHeading">Finishing up</h1>
       <p className="subHeading">
         Double check everything looks OK before confirming.
@@ -44,7 +70,7 @@ const Step4 = () => {
           <button className="nextBtn">Next</button>
         </Link>
       </div>
-    </form>
+    </motion.form>
   );
 };
 

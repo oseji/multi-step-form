@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const Step1 = () => {
   const [completed, setCompleted] = useState(false);
@@ -23,6 +24,24 @@ const Step1 = () => {
       console.log("completed", completed);
     }
   }, [name, email, number]);
+
+  const containerVariants = {
+    hidden: {
+      opacity: 0,
+      height: 0,
+      y: 20,
+    },
+    visible: {
+      opacity: 1,
+      height: "auto",
+      y: 0,
+      transition: { duration: 0.7 },
+    },
+    exit: {
+      x: "25%",
+      opacity: 0,
+    },
+  };
 
   const progress = (e) => {
     e.preventDefault();
@@ -55,7 +74,15 @@ const Step1 = () => {
   };
 
   return (
-    <form action="" className="stepFrom" onSubmit={progress}>
+    <motion.form
+      action=""
+      className="stepForm"
+      onSubmit={progress}
+      variants={containerVariants}
+      initial="hidden"
+      animate="visible"
+      exit="exit"
+    >
       <h1 className="formHeading">Personal info</h1>
       <p className="subHeading">
         Please provide your name, email address and phone number
@@ -81,8 +108,8 @@ const Step1 = () => {
 
         <div className="inputGrp">
           <div className="labelGrp">
-            <label htmlFor="name">email address</label>
-            <label htmlFor="name" className="errLabel" ref={errLabelRefs[1]}>
+            <label htmlFor="email">email address</label>
+            <label htmlFor="email" className="errLabel" ref={errLabelRefs[1]}>
               This field is required
             </label>
           </div>
@@ -98,8 +125,8 @@ const Step1 = () => {
 
         <div className="inputGrp">
           <div className="labelGrp">
-            <label htmlFor="name">phone number</label>
-            <label htmlFor="name" className="errLabel" ref={errLabelRefs[2]}>
+            <label htmlFor="number">phone number</label>
+            <label htmlFor="number" className="errLabel" ref={errLabelRefs[2]}>
               This field is required
             </label>
           </div>
@@ -121,7 +148,7 @@ const Step1 = () => {
       ) : (
         <button className="nextBtn">next page</button>
       )}
-    </form>
+    </motion.form>
   );
 };
 

@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { useRef, useState, useEffect } from "react";
+import { motion } from "framer-motion";
 import cardArcade from "./assets/icon-arcade.svg";
 import cardAdvanced from "./assets/icon-advanced.svg";
 import cardIPro from "./assets/icon-pro.svg";
@@ -70,8 +71,33 @@ const Step2 = () => {
     setPlanPrice(Number(e.target.dataset.price));
   };
 
+  const containerVariants = {
+    hidden: {
+      opacity: 0,
+      height: 0,
+      y: 20,
+    },
+    visible: {
+      opacity: 1,
+      height: "auto",
+      y: 0,
+      transition: { duration: 0.7 },
+    },
+    exit: {
+      x: "25%",
+      opacity: 0,
+    },
+  };
+
   return (
-    <form action="" className="stepForm">
+    <motion.form
+      action=""
+      className="stepForm"
+      variants={containerVariants}
+      initial="hidden"
+      animate="visible"
+      exit="exit"
+    >
       <h1 className="formHeading">Select your plan</h1>
       <p className="subHeading">
         You have the option of monthly or yearly billing.
@@ -145,7 +171,7 @@ const Step2 = () => {
           <button className="nextBtn">Next</button>
         </Link>
       </div>
-    </form>
+    </motion.form>
   );
 };
 

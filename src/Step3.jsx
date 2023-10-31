@@ -1,8 +1,34 @@
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const Step3 = () => {
+  const containerVariants = {
+    hidden: {
+      opacity: 0,
+      height: 0,
+      y: 20,
+    },
+    visible: {
+      opacity: 1,
+      height: "auto",
+      y: 0,
+      transition: { duration: 0.7 },
+    },
+    exit: {
+      x: "25%",
+      opacity: 0,
+    },
+  };
+
   return (
-    <form action="" className="stepForm">
+    <motion.form
+      action=""
+      className="stepForm"
+      variants={containerVariants}
+      initial="hidden"
+      animate="visible"
+      exit="exit"
+    >
       <h1 className="formHeading">Pick add-ons</h1>
       <p className="subHeading">Add-ons help enhance your gaming experience.</p>
 
@@ -56,7 +82,7 @@ const Step3 = () => {
           <button className="nextBtn">Next</button>
         </Link>
       </div>
-    </form>
+    </motion.form>
   );
 };
 
