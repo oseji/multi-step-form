@@ -13,7 +13,7 @@ html {
 /* STEP CONTAINER */
 .stepsContainer {
   @apply lg:w-72 h-48
-  lg:h-100 flex flex-row lg:flex-col justify-center lg:justify-start gap-8 p-5 lg:rounded-xl bg-bgMobile lg:bg-bgDesktop bg-no-repeat bg-contain text-white font-semibold;
+  lg:h-100 flex flex-row lg:flex-col justify-center lg:justify-start gap-8 p-5 lg:rounded-xl bg-no-repeat bg-contain text-white font-semibold;
 }
 
 .step {

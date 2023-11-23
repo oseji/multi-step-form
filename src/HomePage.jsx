@@ -6,13 +6,13 @@ import {
   useLocation,
 } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
+import { useRef } from "react";
 
 import Step1 from "./Step1";
 import Step2 from "./Step2";
 import Step3 from "./Step3";
 import Step4 from "./Step4";
 import Completed from "./Completed";
-import { useRef } from "react";
 
 const HomePage = () => {
   const stepNumRefs = [useRef(null), useRef(null), useRef(null), useRef(null)];
@@ -36,7 +36,11 @@ const HomePage = () => {
 
   return (
     <section className="HomePage">
-      <div className="stepsContainer">
+      <div
+        className="stepsContainer
+       bg-[url('./assets/bg-sidebar-mobile.svg')] 
+       lg:bg-[url('./assets/bg-sidebar-desktop.svg')]"
+      >
         <Link to="/">
           <div className="step">
             <div
@@ -129,7 +133,7 @@ const HomePage = () => {
               <Completed></Completed>
             </Route>
           </Switch>
-        </div>{" "}
+        </div>
       </AnimatePresence>
     </section>
   );
